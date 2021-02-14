@@ -7,3 +7,4 @@ st.write(x_value, 'squared is updated now', x_value * x_value)
 tel = {'jack': 4098, 'sape': 4139}
 tel
 st.write(tel)
+st.bar_chart(data=tel, width=0, height=0, use_container_width=True)
