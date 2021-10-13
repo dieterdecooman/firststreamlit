@@ -1,4 +1,14 @@
 # Python to Linux Web App on Azure
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1 (975f9640-c54c-428a-bc24-080aea3c32e6)'
+    appType: 'webAppLinux'
+    appName: 'ddc-webapp-devops'
+    deployToSlotOrASE: true
+    resourceGroupName: 'DefaultResourceGroup-WEU'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'PYTHON|3.8'
 # Build your Python project and deploy it to Azure as a Linux Web App.
 # Change python version to one thats appropriate for your application.
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
